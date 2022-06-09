@@ -13,12 +13,12 @@ endif
 
 .PHONY: dependencies
 pip-install:
-python -m ensurepip --upgrade && pip install -r requirements.txt
+	python -m ensurepip --upgrade && pip install -r requirements.txt
 
 .PHONY: docker
 start:
-docker-compose up -d
+	docker-compose up -d
 stop:
-docker-compose down --remove-orphans
+	docker-compose down --remove-orphans
 clean:
-docker system prune -f
+	docker system prune -f
